@@ -1,0 +1,11 @@
+package com.jhl.ngImage.vo;
+
+
+public class DataVO {
+	
+	private int imgNum;
+	private String imgName;
+	
+	
+	
+}

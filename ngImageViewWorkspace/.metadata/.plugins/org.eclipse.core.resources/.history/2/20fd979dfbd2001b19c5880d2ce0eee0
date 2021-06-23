@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jhl.mappers.sort3Mapper">
+
+	<select id="insertImgInf" parameterType="DataVO">
+		insert into img3(img3.imgnum, imgname) VALUES(TMP_SEQ.nextval, #{imgName})
+	</select>
+	
+	<select id="doCommit">
+		commit
+	</select>
+</mapper>

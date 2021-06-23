@@ -1,0 +1,5 @@
+package com.jhl.ngImage.dao;
+
+public interface Sort3DAO {
+
+}

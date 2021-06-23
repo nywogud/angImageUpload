@@ -1,0 +1,11 @@
+package com.jhl.ngImage.dao;
+
+import com.jhl.ngImage.vo.DataVO;
+
+public interface Sort3DAO {
+	
+	public void insertImgInf(DataVO dataVO) throws Exception;
+
+	public void doCommit() throws Exception;
+	
+}

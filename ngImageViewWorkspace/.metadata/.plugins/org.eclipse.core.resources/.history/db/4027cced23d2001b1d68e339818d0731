@@ -1,0 +1,13 @@
+package com.jhl.ngImage.dao;
+
+import org.springframework.stereotype.Repository;
+
+import com.jhl.ngImage.vo.DataVO;
+
+@Repository
+public interface Sort3DAO {
+	
+	@Override
+	public void insertImgInf(DataVO dataVo) throws Exception;
+	
+}

@@ -1,0 +1,5 @@
+package com.jhl.ngImage.vo;
+
+public class PagingVO {
+
+}

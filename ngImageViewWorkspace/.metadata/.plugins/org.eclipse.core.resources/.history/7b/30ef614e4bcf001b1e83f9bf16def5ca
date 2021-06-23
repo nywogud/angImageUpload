@@ -1,0 +1,6 @@
+package com.jhl.ngImage.dao;
+
+public interface Sort3DAO {
+
+	public void insertImgInf() throws Exception;
+}

@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+D:\angularImageView\ngImageViewWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\327918073.index
+\ngImageView\src\main\java

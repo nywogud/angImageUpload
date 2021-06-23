@@ -1,0 +1,21 @@
+package com.jhl.ngImage.dao;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.jhl.ngImage.vo.DataVO;
+
+@Repository
+public class Sort3DAOImp implements Sort3DAO {
+	
+	@Autowired
+	private SqlSession sqlSeesion;
+	
+	private static final String Namespace = "com.jhl.mappers.sort1Mapper"; 
+
+	public void insertImgInf(DataVO dataVo) throws Exception{
+		
+		
+	}
+}

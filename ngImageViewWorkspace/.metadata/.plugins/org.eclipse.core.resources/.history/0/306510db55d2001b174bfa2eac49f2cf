@@ -1,0 +1,21 @@
+package com.jhl.ngImage.service;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Service;
+
+import com.jhl.ngImage.dao.Sort3DAO;
+import com.jhl.ngImage.vo.DataVO;
+
+@Service
+public class Sort3ServiceImp implements Sort3Service {
+	
+	@Inject
+	Sort3DAO sort3DAO;
+	
+	@Override
+	public void insertImgInf(DataVO dataVO) throws Exception{
+		sort3DAO.insertImgInf(dataVO);
+	}
+
+}

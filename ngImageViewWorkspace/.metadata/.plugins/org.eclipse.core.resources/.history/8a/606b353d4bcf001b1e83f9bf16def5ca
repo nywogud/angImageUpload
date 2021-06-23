@@ -1,0 +1,7 @@
+package com.jhl.ngImage.service;
+
+public interface Sort3Service {
+	
+	public void insertImgInf() throws Exception;
+
+}

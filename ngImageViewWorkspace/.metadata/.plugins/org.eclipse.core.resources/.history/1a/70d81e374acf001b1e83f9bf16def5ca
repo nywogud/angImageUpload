@@ -1,0 +1,16 @@
+package com.jhl.ngImage.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class Sort3ServiceImp implements Sort3Service {
+	
+	@Autowired
+	Sort3DAO sort3DAO;
+	
+	public void insertImgInf() throws Exception{
+		
+	}
+
+}

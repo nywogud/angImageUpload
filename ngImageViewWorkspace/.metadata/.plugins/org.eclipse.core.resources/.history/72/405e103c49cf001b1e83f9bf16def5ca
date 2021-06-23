@@ -1,0 +1,5 @@
+package com.jhl.ngImage.service;
+
+public interface Sort3Service {
+
+}

@@ -1,0 +1,74 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<title>Insert title here</title>
+<script>
+	var app = angular.module("imageView", []);
+
+	app.controller("butCon", function($scope) {
+		$scope.sort3 = function() {
+			//갈아 끼울 component(기본값은 sort3)
+			alert("sort3 button 눌렸음");
+		}
+
+		$scope.sort4 = function() {
+			//갈아 끼울 component
+			alert("sort4 button 눌렸음");
+		}
+
+		$scope.sort5 = function() {
+			//갈아 끼울 component
+			alert("sort5 button 눌렸음");
+		}
+	})
+</script>
+
+
+<script>
+	function upload(){
+		var form = new FormData(document.getElementById("uploadForm"));
+		$.ajax({
+			url : "/sort3Upload",
+			type : "POST",
+			data : form,
+			processData: false,
+			contentType: false,
+			success : function(result){
+				$('#temp').empty();
+				$('#temp').append(result);
+			}
+		})
+	}
+</script>
+</head>
+<body>
+	<div ng-app="imageView" ng-controller="butCon" name="form">
+		<div style="display: inline-block">
+			<input type="button" ng-click="sort3()" value="sort3"></input> <input
+				type="button" ng-click="sort4()" value="sort4"></input> <input
+				type="button" ng-click="sort5()" value="sort5"></input>
+		</div>
+		<span ui-view>
+			<div style="display: inline-block;">
+				<form id="uploadForm" enctype="multipart/form-data" method="POST" target="iframe1">
+					<input type="file" name="file" value="파일선택" />
+					<button type="submit" onclick="upload()">파일업로드</button>
+				</form>
+			</div>
+			<br>
+			<label>업로드된 이미지 이름과 확장자 : </label>
+			<label id="temp">
+				<img src="img/bomi.jpg">
+			</label>
+		</span>
+	</div>
+</body>
+<iframe name="iframe1" style="display:none;"></iframe>
+</html>
