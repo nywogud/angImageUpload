@@ -1,6 +1,5 @@
 INDEX VERSION 1.4+D:\angularImageView\ngImageViewWorkspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 1552623809.index
-327918073.index
 603285952.index
 106732710.index
 1508423263.index

@@ -13,7 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.jhl.ngImage.service.Sort3Service;
@@ -35,15 +34,16 @@ public class Sort3Controller {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
-	//get방식. url "/"로 들어왔을 경우 redirecting되는 경로. 
+	//GET. url "/"로 들어왔을 경우 redirecting되는 기본 경로. 
 	@RequestMapping(value = "/sort3", method = RequestMethod.GET)
 	public String homeGet(PagingVO pagingVO, Model model,
 			@RequestParam(required = false, value = "nowPage") String nowPage,
 			@RequestParam(required = false, value = "cntPerPage") String cntPerPage) throws Exception {
-		// 기본 화면에서 sort3 이미지 페이징 처리 나열
+		
+		// 기본 화면에서 sort3 이미지 페이징 처리
+		//전체 이미지 갯수를 DB 조회를 통해 가져옴.
 		int total = service.totalImag();
 
 		// 현재 페이지와 페이지 당 이미지 갯수 지정, 기본 1페이지 이미지 갯수는 12개
@@ -96,10 +96,6 @@ public class Sort3Controller {
 		model.addAttribute("paging", pagingVO);
 		// 이미지 총 갯수, 현재 페이지, 페이지 당 이미지 수를 파람으로 디비 조회. 페이징 이미지 리스트 호출, 변수에 저장.
 		List<DataVO> imgList = service.selectAllWithPaging(pagingVO);
-
-		for (int i = 0; i < imgList.size(); i++) {
-			System.out.println(imgList.get(i).getImgName());
-		}
 
 		model.addAttribute("imgList", imgList);
 

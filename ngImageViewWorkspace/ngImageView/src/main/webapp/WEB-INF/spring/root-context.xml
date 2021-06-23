@@ -28,7 +28,7 @@
 	</bean>
 	
 	<!-- dao 등록 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"> 
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.jhl.dao"/>
 	</bean>
 	<!-- service 등록 -->
